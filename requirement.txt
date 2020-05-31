@@ -1,0 +1,42 @@
+======================================
+Gilded Rose Requirements Specification
+======================================
+
+Hai dan selamat datang ke tim Gilded Rose. Seperti yang anda ketahui, kita adalah sebuah penginapan kecil
+berlokasi sangat menguntungkan di sebuah kota besar yang dijalankan oleh seorang yang sangat ramah
+bernama Allison. Kita juga menjual barang-barang di dalam penginapan. Sayangnya, barang-barang kita
+akan berkurang kualitasnya seiring dengan sejak kapan barang tersebut dijual. Kita memiliki sebuah sistem
+yang akan memperbaharui status barang untuk kita. Sistem tersebut dahulu dibuat oleh seseorang bernama
+Leeroy, yang sudah tidak bekerja disini lagi. Tugasmu adalah menambahkan fitur baru ke sistem kita
+sehingga kita dapat mulai menjual kategori barang yang baru. Sistem kita pada dasarnya bekerja sebagai
+berikut:
+
+    - Semua barang memiliki sebuah nilai bernama SellIn yang menunjukan berapa hari lagi kita harus menjual
+        barang tersebut
+    - Semua barang memiliki sebuah nilai bernama Quality yang menunjukan seberapa nilai dari suatu barang
+    - Setiap hari berakhir sistem kita akan mengubah nilai-nilai dari setiap barang
+
+Cukup sederhana bukan? Hal-hal berikut ini dimana semuanya menjadi lebih menarik:
+
+    - Ketika waktu berjualan sudah habis, Quality akan berkurang dua kali lebih cepat
+    - Nilai dari Quality tidak pernah negatif
+    - Quality dari barang bernama "Aged Brie" akan selalu bertambah seiring waktu berjalan
+    - Nilai Quality dari suatu barang tidak pernah lebih dari 50
+    - "Sulfuras", sebuah barang langka, tidak boleh dijual atau berkurang Quality-nya
+    - "Backstage passes", seperti "Aged Brie", bertambah nilai Quality seiring dengan nilai SellIn.
+        Quality bertambah 2 ketika konser tinggal kurang dari 10 hari lagi dan bertambah 3 ketika
+        konser tinggal kurang dari 5 hari lagi tetapi Quality akan turun menjadi 0 ketika konser
+        berakhir
+
+Kita sudah bekerja sama dengan supplier baru untuk menjual barang "Conjured". Berikut ini adalah
+kebutuhan untuk memperbaharui sistem kita:
+
+    - Barang-barang "Conjured" berkurang Quality-nya dua kali lebih cepat dari barang biasa
+
+Anda bebas untuk melakukan perubahan apapun pada method updateQuality dan juga menambahkan kode baru
+selama semuanya masih berjalan sebagaimana semestinya. Tetapi, anda dimohon untuk tidak mengubah class
+Item atau atribut dari Item karena kode tersebut dibuat oleh goblin beberapa waktu silam dan akan mengamuk
+ketika kode tersebut diubah.
+
+Sebagai klarifikasi, sebuah barang tidak dapat memiliki Quality di atas 50, tetapi "Sulfuras" adalah
+barang legendaris yang memiliki Quality 80 dan tidak boleh diubah-ubah.
